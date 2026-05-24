@@ -1,5 +1,6 @@
 name: Build Launcher
 on: [push]
+
 jobs:
   build:
     runs-on: windows-latest
@@ -17,7 +18,7 @@ jobs:
           
       - name: Build with PyInstaller
         run: |
-          pyinstaller --noconsole --onefile --add-data "assets;assets" main.py
+          pyinstaller --noconsole --onefile --collect-all PyQt6 --add-data "assets;assets" main.py
           
       - uses: actions/upload-artifact@v4
         with:
