@@ -1,0 +1,54 @@
+QWidget {
+    background-color: #1e1f22;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: Segoe UI;
+}
+
+QLineEdit, QComboBox {
+    background-color: #2b2d31;
+    border: 2px solid #3f4248;
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+}
+
+/* Строгий плоский стиль кнопок */
+QPushButton {
+    background-color: #2b2d31;
+    border: 2px solid #3f4248;
+    border-radius: 10px;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Синяя рамка при наведении как на 2026-05-24_13-09_2.png */
+QPushButton:hover {
+    border: 2px solid #5865f2;
+    background-color: #35373c;
+}
+
+QPushButton:pressed {
+    background-color: #202225;
+}
+
+QListWidget {
+    background-color: #2b2d31;
+    border: 2px solid #3f4248;
+    border-radius: 12px;
+    padding: 5px;
+}
+
+QListWidget::item {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+QListWidget::item:selected {
+    background-color: #5865f2;
+}
+
+QLabel {
+    color: white;
+}

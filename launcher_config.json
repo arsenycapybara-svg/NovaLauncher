@@ -1,0 +1,8 @@
+{
+    "nickname": "67ars",
+    "ram": "8G",
+    "selected_version": "1.21.10",
+    "show_snapshots": false,
+    "java_path": "",
+    "jvm_args": "-Xmx4G -Xms2G"
+}

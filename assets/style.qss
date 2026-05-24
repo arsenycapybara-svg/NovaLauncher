@@ -1,0 +1,132 @@
+QWidget {
+    color: white;
+    font-size: 14px;
+    background: transparent;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+QPushButton {
+    background-color: rgba(20,20,20,190);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* HOVER */
+
+QPushButton:hover {
+    background-color: rgba(0,170,85,180);
+    border: 1px solid rgb(0,255,120);
+}
+
+/* CLICK */
+
+QPushButton:pressed {
+    background-color: rgba(0,120,60,220);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+QLineEdit,
+QTextEdit,
+QListWidget,
+QComboBox {
+    background-color: rgba(15,15,15,220);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+}
+
+/* =========================
+   INPUT HOVER
+========================= */
+
+QLineEdit:hover,
+QComboBox:hover,
+QListWidget:hover,
+QTextEdit:hover {
+    border: 1px solid rgb(0,255,120);
+}
+
+/* =========================
+   COMBOBOX
+========================= */
+
+QComboBox {
+    combobox-popup: 0;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 30px;
+    background: transparent;
+}
+
+QComboBox QAbstractItemView {
+    background-color: rgb(20,20,20);
+    color: white;
+    border: 1px solid #333;
+    outline: none;
+    selection-background-color: rgb(0,170,85);
+    selection-color: white;
+}
+
+/* =========================
+   LISTS
+========================= */
+
+QListWidget {
+    outline: none;
+}
+
+QListWidget::item:selected {
+    background-color: rgb(0,170,85);
+}
+
+/* HOVER ITEM */
+
+QListWidget::item:hover {
+    background-color: rgba(0,170,85,120);
+}
+
+/* =========================
+   PROGRESSBAR
+========================= */
+
+QProgressBar {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(20,20,20,200);
+}
+
+QProgressBar::chunk {
+    background-color: #00ff66;
+    border-radius: 10px;
+}
+
+/* =========================
+   GROUPBOX
+========================= */
+
+QGroupBox {
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(0,0,0,80);
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 5px;
+}

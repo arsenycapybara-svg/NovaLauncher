@@ -1,0 +1,70 @@
+{
+  "stats": {
+    "minecraft:killed": {
+      "minecraft:iron_golem": 1,
+      "minecraft:cow": 2
+    },
+    "minecraft:used": {
+      "minecraft:wooden_axe": 45,
+      "minecraft:spruce_boat": 1,
+      "minecraft:crafting_table": 3,
+      "minecraft:spruce_planks": 5,
+      "minecraft:wooden_pickaxe": 3,
+      "minecraft:iron_pickaxe": 6
+    },
+    "minecraft:picked_up": {
+      "minecraft:spruce_log": 10,
+      "minecraft:carrot": 2,
+      "minecraft:cobblestone": 9,
+      "minecraft:poppy": 2,
+      "minecraft:potato": 9,
+      "minecraft:wheat_seeds": 2,
+      "minecraft:leather": 1,
+      "minecraft:iron_ingot": 5,
+      "minecraft:beef": 5
+    },
+    "minecraft:mined": {
+      "minecraft:ice": 2,
+      "minecraft:spruce_log": 11,
+      "minecraft:potatoes": 11,
+      "minecraft:wheat": 3,
+      "minecraft:large_fern": 1,
+      "minecraft:carrots": 2,
+      "minecraft:spruce_leaves": 4,
+      "minecraft:stone": 9
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 6,
+      "minecraft:talked_to_villager": 1,
+      "minecraft:time_since_rest": 6920,
+      "minecraft:walk_one_cm": 5374,
+      "minecraft:leave_game": 1,
+      "minecraft:mob_kills": 3,
+      "minecraft:damage_taken": 30,
+      "minecraft:boat_one_cm": 170162,
+      "minecraft:play_time": 6920,
+      "minecraft:damage_dealt": 1199,
+      "minecraft:jump": 89,
+      "minecraft:time_since_death": 6920,
+      "minecraft:open_barrel": 3,
+      "minecraft:sprint_one_cm": 13903,
+      "minecraft:fall_one_cm": 3981,
+      "minecraft:total_world_time": 7652,
+      "minecraft:fly_one_cm": 14389,
+      "minecraft:walk_on_water_one_cm": 520,
+      "minecraft:crouch_one_cm": 993,
+      "minecraft:sneak_time": 366
+    },
+    "minecraft:crafted": {
+      "minecraft:stick": 8,
+      "minecraft:wooden_axe": 1,
+      "minecraft:wooden_pickaxe": 1,
+      "minecraft:spruce_boat": 1,
+      "minecraft:shield": 1,
+      "minecraft:spruce_planks": 40,
+      "minecraft:iron_pickaxe": 1,
+      "minecraft:crafting_table": 3
+    }
+  },
+  "DataVersion": 4671
+}

@@ -1,0 +1,5 @@
+build/
+dist/
+java/
+instances/
+.venv/
