@@ -19,15 +19,11 @@ jobs:
           
       - name: Build with PyInstaller
         run: |
-          # Находим точное местоположение плагинов PyQt6
-          QT_PLUGINS=$(python -c "import PyQt6; import os; print(os.path.join(os.path.dirname(PyQt6.__file__), 'Qt6', 'plugins'))")
-          echo "Путь к плагинам: $QT_PLUGINS"
-          
-          # Запускаем сборку
-          pyinstaller --noconsole \
+          # Используем более простой способ для плагинов
+          pyinstaller --noconsole --onefile \
           --collect-all PyQt6 \
           --collect-all minecraft_launcher_lib \
-          --add-data "$QT_PLUGINS/platforms;PyQt6/Qt6/plugins/platforms" \
+          --copy-metadata PyQt6 \
           --add-data "assets;assets" \
           main.py
           
