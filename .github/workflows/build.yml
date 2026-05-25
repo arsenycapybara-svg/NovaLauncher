@@ -14,18 +14,13 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Устанавливаем библиотеку из файла
           pip install -r requirements.txt
-          # Устанавливаем PyInstaller для сборки
           pip install pyinstaller
           
       - name: Build with PyInstaller
         run: |
-          echo "Список установленных библиотек:"
-          pip list
-          echo "Начинаем сборку:"
-          # Сборка в папку с полным сбором PyQt6
-          pyinstaller --noconsole --collect-all PyQt6 --add-data "assets;assets" main.py
+          echo "Начинаем сборку с учетом всех библиотек:"
+          pyinstaller --noconsole --collect-all PyQt6 --collect-all minecraft_launcher_lib --add-data "assets;assets" main.py
           
       - uses: actions/upload-artifact@v4
         with:
