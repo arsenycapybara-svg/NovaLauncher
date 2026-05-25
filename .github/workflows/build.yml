@@ -19,13 +19,21 @@ jobs:
           
       - name: Build with PyInstaller
         run: |
-          # Используем более простой способ для плагинов
-          pyinstaller --noconsole --onefile \
-          --collect-all PyQt6 \
-          --collect-all minecraft_launcher_lib \
-          --copy-metadata PyQt6 \
-          --add-data "assets;assets" \
-          main.py
+          # Создаем базовый spec-файл
+          pyi-makespec --noconsole --onefile --add-data "assets;assets" main.py
+          
+          # Дописываем в spec-файл автоматический поиск плагинов PyQt6
+          python -c "
+import os
+import PyQt6
+with open('main.spec', 'r') as f: spec = f.read()
+plugins_path = os.path.join(os.path.dirname(PyQt6.__file__), 'Qt6', 'plugins')
+new_line = f\"a.datas += Tree('{plugins_path}', prefix='PyQt6/Qt6/plugins')\"
+spec = spec.replace('datas=[],', f'datas=[],\\n{new_line},')
+with open('main.spec', 'w') as f: f.write(spec)
+"
+          # Собираем проект по готовому spec-файлу
+          pyinstaller main.spec
           
       - uses: actions/upload-artifact@v4
         with:
