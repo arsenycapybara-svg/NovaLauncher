@@ -19,10 +19,12 @@ jobs:
           
       - name: Build with PyInstaller
         run: |
-          # Убираем --onefile, чтобы собрать в папку
-          pyinstaller --noconsole --add-data "assets;assets" main.py
+          echo "Проверка установленных библиотек:"
+          pip list
+          echo "Начинаем сборку:"
+          pyinstaller --noconsole --collect-all PyQt6 --add-data "assets;assets" main.py
           
       - uses: actions/upload-artifact@v4
         with:
-          name: NovaLauncher-Folder
-          path: dist/main/
+          name: NovaLauncher-Build
+          path: dist/
