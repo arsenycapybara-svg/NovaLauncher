@@ -19,9 +19,15 @@ jobs:
           
       - name: Build with PyInstaller
         run: |
-          pyinstaller --noconsole --onefile --collect-all PyQt6 --collect-all minecraft_launcher_lib --copy-metadata PyQt6 --add-data "assets;assets" main.py
+          # Собираем в папку, а не в один файл
+          # Используем --collect-all для надежного захвата зависимостей
+          pyinstaller --noconsole \
+          --collect-all PyQt6 \
+          --collect-all minecraft_launcher_lib \
+          --add-data "assets;assets" \
+          main.py
           
       - uses: actions/upload-artifact@v4
         with:
           name: NovaLauncher-Build
-          path: dist/main.exe
+          path: dist/main/
