@@ -19,8 +19,17 @@ jobs:
           
       - name: Build with PyInstaller
         run: |
-          echo "Начинаем сборку с учетом всех библиотек:"
-          pyinstaller --noconsole --collect-all PyQt6 --collect-all minecraft_launcher_lib --add-data "assets;assets" main.py
+          # Находим точное местоположение плагинов PyQt6
+          QT_PLUGINS=$(python -c "import PyQt6; import os; print(os.path.join(os.path.dirname(PyQt6.__file__), 'Qt6', 'plugins'))")
+          echo "Путь к плагинам: $QT_PLUGINS"
+          
+          # Запускаем сборку
+          pyinstaller --noconsole \
+          --collect-all PyQt6 \
+          --collect-all minecraft_launcher_lib \
+          --add-data "$QT_PLUGINS/platforms;PyQt6/Qt6/plugins/platforms" \
+          --add-data "assets;assets" \
+          main.py
           
       - uses: actions/upload-artifact@v4
         with:
